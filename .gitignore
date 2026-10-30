@@ -1,0 +1,94 @@
+# ==============================================================================
+# ChandraAlign // Production Git Ignore Configuration for GitHub
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Virtual Environments & Local Runtimes (DO NOT COMMIT GIGABYTES OF LIBS)
+# ------------------------------------------------------------------------------
+LUNA/
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 2. Large Raw Planetary Mission Swaths & Binary Datasets (> 25MB - 500MB)
+#    (GitHub enforces a strict 100MB file limit; these will break git push)
+# ------------------------------------------------------------------------------
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+*.img
+data/*.zip
+data/*.img
+data/ch2_tmc2_mission_swath.zip
+data/test_synthetic_pds4_swath.img
+data/unpacked_swath/
+data/swath_tiles/
+data/isro_tmc2_results/
+data/images/
+data/masks/
+data/test_samples/
+data/test_sample/
+
+# ------------------------------------------------------------------------------
+# 3. Model Checkpoints & Pre-trained Weights (Loaded dynamically from HuggingFace Hub)
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.pwf
+*.onnx
+*.bin
+*.h5
+*.tflite
+*.safetensors
+data/checkpoints/
+checkpoints/
+
+# ------------------------------------------------------------------------------
+# 4. Runtime Caches, Output Directories & Scratch Buffers
+# ------------------------------------------------------------------------------
+output/
+data/output/
+data/lroc_cache/
+data/lroc_geo_cache/
+data/scratch_non_overlap_ref.png
+data/user_*.png
+.tempmediaStorage/
+inspect_repo.py
+
+# ------------------------------------------------------------------------------
+# 5. Android Build Artifacts & Local Machine SDK Paths
+# ------------------------------------------------------------------------------
+android_app/.gradle/
+android_app/build/
+android_app/*/build/
+android_app/local.properties
+android_app/.idea/
+android_app/*.iml
+android_app/*/*.iml
+.gradle/
+build/
+captures/
+
+# ------------------------------------------------------------------------------
+# 6. Python Bytecode, Caches & OS Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/

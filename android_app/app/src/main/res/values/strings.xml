@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LunarReg ISRO</string>
+    <string name="title_lunar_reg">Chandrayaan-2 Image Registration</string>
+    <string name="btn_generate_synthetic">Generate Synthetic Lunar Pair</string>
+    <string name="btn_run_registration">Run Sub-Pixel Alignment Engine</string>
+    <string name="lbl_metrics">Evaluation Metrics</string>
+</resources>
